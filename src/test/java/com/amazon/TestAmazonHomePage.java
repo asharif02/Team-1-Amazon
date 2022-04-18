@@ -16,10 +16,14 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.realismStyleButton.click();
 
 
-//        String actualTitle = driver.getTitle();
-//        String expectedTitle = "Shop by Room - Living Room | Amazon.com";
-//        Assert.assertEquals("ACTUAL DOES NOT MATCH EXPECTED RESULT", actualTitle, expectedTitle);
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Amazon.com";
+        Assert.assertEquals(actualTitle, expectedTitle, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
+
     }
+
+
+
 
 //    @Test
 //    public void testFurnitureButton() {
