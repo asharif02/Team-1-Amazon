@@ -1,13 +1,14 @@
 package com.amazon;
 
 import base.TestBasePage;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestAmazonHomePage extends TestBasePage {
 
     @Test
-    public void testFurnitureSectionItemRetrieval() {
+    public void testFurnitureSection() {
         Homepage homepage = new Homepage();
         AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
         amazonHomePage.furnitureButton.click();
@@ -22,23 +23,19 @@ public class TestAmazonHomePage extends TestBasePage {
 
     }
 
+    @Test
+    public void testHoverOnAmazonHomeSubnav() {
+        Homepage homepage = new Homepage();
+        AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
+        Actions actions = new Actions(driver);
+
+        actions.moveToElement(amazonHomePage.shopByStyleHover);
+        actions.moveToElement(amazonHomePage.homeStyleQuizButton);
+        actions.click().build().perform();
 
 
+    }
 
-//    @Test
-//    public void testFurnitureButton() {
-//        Homepage homepage = new Homepage();
-//        AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
-//        amazonHomePage.furnitureButton.click();
-//    }
-
-//    @Test
-//    public void testShopAllLivingRoomFurnitureButton() {
-//        Homepage homepage = new Homepage();
-//        AmazonHomePage amazonHomePage = new AmazonHomePage();
-//        amazonHomePage.furnitureButton.click();
-//        amazonHomePage.shopAllLivingRoomFurnitureButton.click();
-//    }
 
 
 }

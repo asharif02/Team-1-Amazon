@@ -22,6 +22,12 @@ public class AmazonHomePage extends BasePage {
     @FindBy(xpath = "//a[@aria-label='Realism']")
     public WebElement realismStyleButton;
 
+    @FindBy(xpath = "//a[@href='/b/?ie=UTF8&node=17853230011&ref_=sv_hg_3']")
+    public WebElement shopByStyleHover;
+
+    @FindBy(xpath = "//a[@href='/stylequiz?ref=sq_sbs_mn']")
+    public WebElement homeStyleQuizButton;
+
     public AmazonHomePage() {
         webDriverWait.until(ExpectedConditions.urlContains(URL));
         PageFactory.initElements(driver, this);
