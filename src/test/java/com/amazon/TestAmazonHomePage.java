@@ -22,12 +22,13 @@ public class TestAmazonHomePage extends TestBasePage {
         String expectedTitle = "Amazon.com";
         Assert.assertEquals(actualTitle, expectedTitle, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
+
     }
     // endregion
 
     // 2nd test case TBD
 
-    // 3rd test case
+    // region 3rd test case
     @Test
     public void testHoverOnAmazonHomeSubnav() {
         Homepage homepage = new Homepage();
@@ -49,9 +50,14 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.likeButtonFour.click();
         amazonHomePage.likeButtonFive.click();
         amazonHomePage.likeButtonSix.click();
+        amazonHomePage.exploreMoreCoffeeTablesPanel.click();
 
+        String actualTitle = driver.getTitle();
+        String expectedTitle = "Discover your style - Coffee Tables | Amazon.com";
+        Assert.assertEquals(actualTitle, expectedTitle, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }
+    // endregion
 
 
     // 4th test case TBD

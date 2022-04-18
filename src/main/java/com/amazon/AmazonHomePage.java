@@ -64,6 +64,12 @@ public class AmazonHomePage extends BasePage {
     @FindBy(xpath = "//div[@data-asin='B009OBA2V8']//img[@alt='like']")
     public WebElement likeButtonSix;
 
+    @FindBy(xpath = "//a[@href='i/home/#furniture']")
+    public WebElement seeAllFurnitureButton;
+
+    @FindBy(xpath = "(//a[@class='teaser-category-page-link mirai-clickable'])[1]")
+    public WebElement exploreMoreCoffeeTablesPanel;
+
 
 
     public AmazonHomePage() {
