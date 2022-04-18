@@ -14,5 +14,3 @@ public class TestAmazonHomePage extends TestBasePage {
 
 
 }
-
-
