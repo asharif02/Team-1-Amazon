@@ -29,10 +29,10 @@ public class Homepage extends BasePage {
     public WebElement registryPage;
 
 
-
     public Homepage() {
         PageFactory.initElements(driver, this);
     }
+
 
     public AmazonHomePage navigateToAmazonHomePage() {
         clickOnElement(amazonHomePage);

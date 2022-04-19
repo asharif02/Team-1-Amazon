@@ -2,6 +2,7 @@ package com.amazon;
 
 import base.TestBasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -39,7 +40,8 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.highPriceTextField.sendKeys(("1500"));
         amazonHomePage.goSearchButton.click();
 
-        String actualText = driver.findElement(By.xpath("//li[@id='p_36/price-range']//input[@value='1,500']")).getText();
+        WebElement highPriceValue = driver.findElement(By.xpath("//li[@id='p_36/price-range']//input[@value='1,500']"));
+        String actualText = highPriceValue.getAttribute("value");
         String expectedText = "1,500";
         Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
@@ -98,6 +100,14 @@ public class TestAmazonHomePage extends TestBasePage {
     // endregion
 
     // region 5th test case (TBD)
+    @Test
+    public void testNavigatingToAmazonHomeItemThroughHomepageDropdown() {
+        Homepage homepage = new Homepage();
+        AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
+        Actions actions = new Actions(driver);
+
+        driver.navigate().back();
+    }
 
 
     // endregion

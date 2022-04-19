@@ -24,6 +24,7 @@ public class AmazonHomePage extends BasePage {
     public WebElement realismStyleButton;
     // endregion
 
+    // region Part 2
     @FindBy(xpath = "//img[@alt='Electronics']")
     public WebElement electronicsButton;
 
@@ -41,9 +42,7 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//span[@class='a-button-inner']//input[@type='submit']")
     public WebElement goSearchButton;
-
-
-
+    // endregion
 
     // region Part 3
     @FindBy(xpath = "//a[@href='/b/?ie=UTF8&node=17853230011&ref_=sv_hg_3']")
@@ -93,9 +92,9 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "(//a[@class='teaser-category-page-link mirai-clickable'])[1]")
     public WebElement exploreMoreCoffeeTablesPanel;
-    // endregion  d
+    // endregion
 
-
+    // region Part 4
     @FindBy(xpath = "(//span[@class='nav-a-content'])[9]")
     public WebElement gardenOutdoorHyperlinkHover;
 
@@ -110,6 +109,14 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//input[@aria-labelledby='attachSiNoCoverage-announce']")
     public WebElement noThanksToWarrantyCoverageButton;
+    // endregion
+
+    // region Part 5
+    @FindBy(xpath = "//select[@aria-describedby='searchDropdownDescription']")
+    public WebElement allDepartmentsDropdownMenu;
+
+
+    // endregion
 
 
     public AmazonHomePage() {
