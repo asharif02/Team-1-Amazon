@@ -10,6 +10,7 @@ public class AmazonHomePage extends BasePage {
 
     private static final String URL = "https://www.amazon.com";
 
+    // region Part 1
     @FindBy(xpath = "//img[@alt='Furniture']")
     public WebElement furnitureButton;
 
@@ -21,7 +22,30 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//a[@aria-label='Realism']")
     public WebElement realismStyleButton;
+    // endregion
 
+    @FindBy(xpath = "//img[@alt='Electronics']")
+    public WebElement electronicsButton;
+
+    @FindBy(xpath = "//img[@alt='TV & Video']")
+    public WebElement tvVideoIcon;
+
+    @FindBy(xpath = "//*[@id=\"s-refinements\"]//li[1]//label/i")
+    public WebElement twentyTwentyOneCheckbox;
+
+    @FindBy(xpath = "//input[@id='low-price']")
+    public WebElement lowPriceTextField;
+
+    @FindBy(xpath = "//input[@id='high-price']")
+    public WebElement highPriceTextField;
+
+    @FindBy(xpath = "//span[@class='a-button-inner']//input[@type='submit']")
+    public WebElement goSearchButton;
+
+
+
+
+    // region Part 3
     @FindBy(xpath = "//a[@href='/b/?ie=UTF8&node=17853230011&ref_=sv_hg_3']")
     public WebElement shopByStyleHover;
 
@@ -31,7 +55,7 @@ public class AmazonHomePage extends BasePage {
     @FindBy(xpath = "//a[@href='/discover/?_encoding=UTF8&ref_=sv_hg_2']")
     public WebElement discoverHyperlinkHover;
 
-    @FindBy(xpath = "//a[@href='/discover/?ref=sbl_mm_lp']")
+    @FindBy(xpath = "//img[@src='https://m.media-amazon.com/images/G/01/img18/home/discoveryourstyle/discover_your_style_mega_sub_nav.jpg']")
     public WebElement discoverPanel;
 
     @FindBy(xpath = "//a[@class='landing-header-welcome-header-focus mirai-clickable']")
@@ -69,7 +93,23 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "(//a[@class='teaser-category-page-link mirai-clickable'])[1]")
     public WebElement exploreMoreCoffeeTablesPanel;
+    // endregion  d
 
+
+    @FindBy(xpath = "(//span[@class='nav-a-content'])[9]")
+    public WebElement gardenOutdoorHyperlinkHover;
+
+    @FindBy(linkText = "Hammocks")
+    public WebElement hammocksHyperLink;
+
+    @FindBy(xpath = "//div[@data-asin='B096RBBF3H']")
+    public WebElement hammockItemListing;
+
+    @FindBy(xpath = "//input[@id='add-to-cart-button']")
+    public WebElement hammockAddToCartButton;
+
+    @FindBy(xpath = "//input[@aria-labelledby='attachSiNoCoverage-announce']")
+    public WebElement noThanksToWarrantyCoverageButton;
 
 
     public AmazonHomePage() {
