@@ -24,6 +24,20 @@ public class BooksPage extends BasePage {
     public WebElement computersAndTechnologyLink;
 
 
+    @FindBy(xpath = "//a[@href='/rentals/b/?ie=UTF8&node=17853655011&ref_=sv_b_6']")
+    public WebElement textBookRentalsButton;
+
+    @FindBy(xpath = "//*[@id=\"isbn-search\"]")
+    public WebElement searchBar;
+
+    @FindBy(xpath = "//*[@id='isbn-search-submit']")
+    public WebElement GoButton;
+
+    public void typeOnSearchBar(String input) {
+        searchBar.sendKeys(input);
+    }
+
+
     public BooksPage() {
         webDriverWait.until(ExpectedConditions.urlContains(url));
         PageFactory.initElements(driver, this);
