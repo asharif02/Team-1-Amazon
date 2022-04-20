@@ -60,6 +60,7 @@ public class TestAmazonHomePage extends TestBasePage {
 
         amazonHomePage.startLikingNowButton.click();
 
+        // SO MUCH CLICKING LOL MY BAD
         amazonHomePage.dislikeButtonOne.click();
         amazonHomePage.likeButtonOne.click();
         amazonHomePage.likeButtonTwo.click();
@@ -108,6 +109,7 @@ public class TestAmazonHomePage extends TestBasePage {
 
         driver.navigate().back();
     }
+
 
 
     // endregion
