@@ -52,7 +52,7 @@ public class BasePage {
 
 
     // region Selenium API
-    public void clickOnElement(WebElement element) {
+    public static void clickOnElement(WebElement element) {
         webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
         element.click();
     }
@@ -124,6 +124,7 @@ public class BasePage {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
+
 
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
