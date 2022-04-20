@@ -22,29 +22,6 @@ public class BooksPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-
-
-//    @FindBy(xpath = "//*[@id=\"nav-subnav\"]/a[5]/span")
-//    public static WebElement childrensBooks;
-//
-//    @FindBy(xpath = "//*[@id=\"contentGrid_201310\"]/div/div[2]/div[2]/div/div/div[2]/a")
-//    public WebElement booksByAgeThreeToFive;
-//
-//    @FindBy(xpath = "//*[@id=\"acs-product-block-1\"]/div[1]/a/img")
-//    public WebElement cuttingToBananas;
-
-//    public static void navigateToBestKidsBooksPage() {
-//        clickOnElement(bestKidsBooksButton);
-//
-//        return new BestkidsBooksPage();
-//
-//    }
-//    public static void navigateToBooksByAgeThreeToFivePage(){
-//        clickOnElement(BooksByAgeThreeToFive);
-//
-//        return new BooksByAgeThreeToFive();
-//    }
-//
   }
 
 
