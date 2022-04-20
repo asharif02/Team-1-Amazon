@@ -10,7 +10,8 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//a[@href='/home-garden-kitchen-furniture-bedding/b/?ie=UTF8&node=1055398&ref_=nav_cs_home']")
     public WebElement amazonHomePage;
 
-    @FindBy(xpath = "//a[@href='/automotive-auto-truck-replacements-parts/b/?ie=UTF8&node=15684181&ref_=nav_cs_automotive']")
+   // @FindBy(xpath = "//a[@href='/automotive-auto-truck-replacements-parts/b/?ie=UTF8&node=15684181&ref_=nav_cs_automotive']")
+    @FindBy(xpath = "//select[@aria-describedby='searchDropdownDescription']")
     public WebElement automotivePage;
 
     @FindBy(xpath = "//a[@href='/books-used-books-textbooks/b/?ie=UTF8&node=283155&ref_=nav_cs_books']")
@@ -40,7 +41,8 @@ public class Homepage extends BasePage {
     }
 
     public AutomotivePage navigateToAutomotivePage() {
-        clickOnElement(automotivePage);
+        automotivePage.click();
+        //clickOnElement(automotivePage);
         return new AutomotivePage();
     }
 
