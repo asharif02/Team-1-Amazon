@@ -10,5 +10,16 @@ public class TestRegistryPage extends TestBasePage {
         Homepage homepage=new Homepage();
         RegistryPage registryPage= homepage.navigateToRegistryPage();
         registryPage.birthdayGiftListButton.click();
+
+    }
+    @Test
+    public void testSerchingBarDropDownIcon()  {
+
+        Homepage homepage= new Homepage();
+        RegistryPage registryPage=homepage.navigateToRegistryPage();
+        registryPage.serachingBarDropDownIcon.click();
+        registryPage.birthdayGiftListDropDownOption.click();
+
+
     }
 }

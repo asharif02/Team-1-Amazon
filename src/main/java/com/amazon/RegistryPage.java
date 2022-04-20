@@ -12,9 +12,20 @@ public class RegistryPage extends BasePage {
     @FindBy(xpath = "(//img[@class='gr-card__img'])[3]")
     public WebElement birthdayGiftListButton;
 
+
+    @FindBy(xpath = "//span[@class='a-button a-button-dropdown gr-find-stripe__type']")
+    public WebElement serachingBarDropDownIcon;
+
+    @FindBy(xpath = "//li[@aria-labelledby='dropdown1_2']")
+    public WebElement birthdayGiftListDropDownOption;
+
+
     public RegistryPage(){
         webDriverWait.until(ExpectedConditions.urlContains(URL));
         PageFactory.initElements(driver, this);
 
     }
+
+
+
 }
