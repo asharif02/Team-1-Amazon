@@ -19,12 +19,16 @@ public class RegistryPage extends BasePage {
     @FindBy(xpath = "//li[@aria-labelledby='dropdown1_2']")
     public WebElement birthdayGiftListDropDownOption;
 
+    @FindBy(xpath = "(//span[@class=\"gr-subnav__item-text\"])[6]")
+    public WebElement helpButton;
+
 
     public RegistryPage(){
         webDriverWait.until(ExpectedConditions.urlContains(URL));
         PageFactory.initElements(driver, this);
 
     }
+
 
 
 

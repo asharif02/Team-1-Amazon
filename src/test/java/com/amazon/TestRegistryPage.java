@@ -22,4 +22,13 @@ public class TestRegistryPage extends TestBasePage {
 
 
     }
+    @Test
+    public void testHelpButton(){
+
+        Homepage homepage= new Homepage();
+        RegistryPage registryPage=homepage.navigateToRegistryPage();
+        registryPage.helpButton.click();
+
+
+    }
 }
