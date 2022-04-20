@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.w3c.dom.html.HTMLInputElement;
 
 public class AmazonHomePage extends BasePage {
 
@@ -12,6 +13,7 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//img[@alt='Décor']")
     public WebElement furnitureButton;
+    public WebElement bestSellerForwardButton;
 
     public AmazonHomePage() {
         webDriverWait.until(ExpectedConditions.urlContains(URL));
