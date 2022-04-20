@@ -17,6 +17,13 @@ public class BooksPage extends BasePage {
     public WebElement ageThreeToFiveLink;
 
 
+    @FindBy(xpath = "//*[@id=\"nav-subnav\"]/a[6]")
+    public WebElement textBooksButton;
+
+    @FindBy(xpath = "//a[@href='/gp/browse.html?rw_useCurrentProtocol=1&node=5&ref_=amb_link_VJgLpYAkM7akdE0i3DIT6A_10']")
+    public WebElement computersAndTechnologyLink;
+
+
     public BooksPage() {
         webDriverWait.until(ExpectedConditions.urlContains(url));
         PageFactory.initElements(driver, this);
