@@ -10,7 +10,7 @@ public class AmazonHomePage extends BasePage {
 
     private static final String URL = "https://www.amazon.com";
 
-    // region Part 1
+    // region Test Case 1 Web Elements
     @FindBy(xpath = "//img[@alt='Furniture']")
     public WebElement furnitureButton;
 

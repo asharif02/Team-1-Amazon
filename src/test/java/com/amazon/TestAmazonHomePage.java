@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 public class TestAmazonHomePage extends TestBasePage {
 
-    // region 1st test case
+    // region 1st test case (write better assertion)
     @Test
-    public void testFurnitureSection() {
+    public void testRealismWallArtItemListings() {
         Homepage homepage = new Homepage();
         AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
         amazonHomePage.furnitureButton.click();
@@ -26,9 +26,9 @@ public class TestAmazonHomePage extends TestBasePage {
     }
     // endregion
 
-    // region 2nd test case (assertion still not working)
+    // region 2nd test case
     @Test
-    public void testElectronicsSection() {
+    public void testFilterTVItemListings() {
         Homepage homepage = new Homepage();
         AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
 
@@ -43,6 +43,7 @@ public class TestAmazonHomePage extends TestBasePage {
         WebElement highPriceValue = driver.findElement(By.xpath("//li[@id='p_36/price-range']//input[@value='1,500']"));
         String actualText = highPriceValue.getAttribute("value");
         String expectedText = "1,500";
+        System.out.println("Currently viewing 2021 TVs that cost no more than $" + actualText + " dollars.");
         Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }
@@ -50,7 +51,7 @@ public class TestAmazonHomePage extends TestBasePage {
 
     // region 3rd test case
     @Test
-    public void testHoverOnAmazonHomeSubnav() throws InterruptedException {
+    public void testSendFeedbackSurvey() {
         Homepage homepage = new Homepage();
         AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
         Actions actions = new Actions(driver);
@@ -92,7 +93,6 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.hammockItemListing.click();
         amazonHomePage.hammockAddToCartButton.click();
         amazonHomePage.noThanksToWarrantyCoverageButton.click();
-
         String actualText = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold']")).getText();
         String expectedText = "Added to Cart";
         Assert.assertEquals(actualText, expectedText);
