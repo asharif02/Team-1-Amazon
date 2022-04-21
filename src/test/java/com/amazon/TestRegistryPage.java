@@ -1,6 +1,9 @@
 package com.amazon;
 
 import base.TestBasePage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestRegistryPage extends TestBasePage {
@@ -30,7 +33,13 @@ public class TestRegistryPage extends TestBasePage {
         Homepage homepage= new Homepage();
         RegistryPage registryPage=homepage.navigateToRegistryPage();
         registryPage.helpButton.click();
-        registryPage.findMoreSolutionSearchingBar.click();
+        registryPage.findMoreSolutionSearchingBar.sendKeys("Return Policy");
+        registryPage.findMoreSolutionSearchingBar.sendKeys(Keys.ENTER);
+
+
+        String actualtext=driver.findElement(By.xpath("(//*[@id='a-page']//h2)[1]")).getText();
+        String expectedtext="Returns & Refunds";
+        Assert.assertEquals(actualtext,expectedtext);
 
 
     }
@@ -43,6 +52,7 @@ public class TestRegistryPage extends TestBasePage {
         registryPage.customGiftListButton.click();
 
     }
+
 
 
 

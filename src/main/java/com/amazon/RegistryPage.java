@@ -13,6 +13,8 @@ public class RegistryPage extends BasePage {
     @FindBy(xpath = "(//img[@class='gr-card__img'])[3]")
     public WebElement birthdayGiftListButton;
 
+    // "//a[@href='/registries/birthday?ref_=gr-landing']"
+
 //Test case 2
     @FindBy(xpath = "//span[@class='a-button a-button-dropdown gr-find-stripe__type']")
     public WebElement serachingBarDropDownIcon;
@@ -32,6 +34,9 @@ public class RegistryPage extends BasePage {
     @FindBy(xpath = "//a[@href='/registries/custom?ref_=registries_subnav']")
     public WebElement customGiftListButton;
 
+    //Test case 5
+
+    //@FindBy(xpath = "")
 
 
 
