@@ -44,6 +44,8 @@ public class AutomotivePage extends BasePage {
     @FindBy(xpath = "//*[@class='a-size-base-plus a-color-base a-text-normal']")
     public  WebElement oilnFluidPumpItem;
 
+    //testCase4
+
 
 
     public AutomotivePage(){
