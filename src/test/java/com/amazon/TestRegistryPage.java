@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 public class TestRegistryPage extends TestBasePage {
 
+
     @Test
     public void testBirthdayGiftListButton(){
         Homepage homepage=new Homepage();
@@ -22,6 +23,7 @@ public class TestRegistryPage extends TestBasePage {
 
 
     }
+
     @Test
     public void testHelpButton(){
 
@@ -31,7 +33,20 @@ public class TestRegistryPage extends TestBasePage {
         registryPage.findMoreSolutionSearchingBar.click();
 
 
+    }
+
+    @Test
+    public void testCustomGiftListButton(){
+
+        Homepage homepage = new Homepage();
+        RegistryPage registryPage=homepage.navigateToRegistryPage();
+        registryPage.customGiftListButton.click();
+
+    }
+
+
+
 
 
     }
-}
+
