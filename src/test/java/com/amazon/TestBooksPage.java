@@ -22,11 +22,10 @@ public class TestBooksPage extends TestBasePage {
         BooksPage booksPage = homepage.navigateToBooksPage();
         booksPage.textBooksButton.click();
         booksPage.computersAndTechnologyLink.click();
-
     }
 
     @Test
-    public void testTextBooksRentalButton(){
+    public void testTextBooksRentalButton() {
         Homepage homepage = new Homepage();
         String searchTerm = "Quran";
         BooksPage booksPage = homepage.navigateToBooksPage();
@@ -34,4 +33,26 @@ public class TestBooksPage extends TestBasePage {
         booksPage.searchBar.click();
         booksPage.GoButton.sendKeys(searchTerm);
     }
+
+    @Test
+    public void testTextBooksStoreLink() {
+        Homepage homepage = new Homepage();
+        BooksPage booksPage = homepage.navigateToBooksPage();
+        booksPage.textBooksStoreLink.click();
+        booksPage.computersAndInternetButton.click();
+        booksPage.algorithmsLink.click();
+        booksPage.seeMoreLink.click();
+        booksPage.introductionToAlgorithmsLink.click();
+    }
+
+    @Test
+    public void testBestBooksOfTheMonth() {
+        Homepage homepage = new Homepage();
+        BooksPage booksPage = homepage.navigateToBooksPage();
+        booksPage.bestBooksOfTheMonth.click();
+        booksPage.onFaceBookLink.click();
+//        booksPage.createNewAccountButton.click();
+//        booksPage.alreadyHaveAnAccountButton.click();
+   }
+
 }

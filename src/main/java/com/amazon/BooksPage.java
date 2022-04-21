@@ -37,6 +37,43 @@ public class BooksPage extends BasePage {
         searchBar.sendKeys(input);
     }
 
+    @FindBy(xpath = "//a[@href='/gp/browse.html?rw_useCurrentProtocol=1&node=465600&ref_=bhp_brws_txt_stor']")
+    public WebElement textBooksStoreLink;
+
+    @FindBy(xpath = "//*[@id=\"sobe_d_b_5_3\"]/a/div/img")
+    public WebElement computersAndInternetButton;
+
+    @FindBy(xpath = "//*[@id=\"s-refinements\"]/div[1]/ul/li[4]/span/a/span")
+    public WebElement algorithmsLink;
+
+    @FindBy(xpath = "//*[@id=\"a-page\"]/div[2]/div[2]/div[1]/div[2]/div/div[2]/div[1]/a/span")
+    public WebElement seeMoreLink;
+
+    @FindBy(xpath = "//*[@id=\"p13n-asin-index-1\"]/div[2]/div/a[2]/span/div")
+    public WebElement introductionToAlgorithmsLink;
+
+
+    @FindBy(xpath = "//*[@id=\"nav-subnav\"]/a[8]/span")
+    public WebElement bestBooksOfTheMonth;
+
+    @FindBy(xpath = "//a[@href='https://www.facebook.com/Amazon.comBooks?rw_useCurrentProtocol=1&ref_=amb_link_ojtSVy9qS5SJ5N1KElWmyg_16']")
+    public WebElement onFaceBookLink;
+
+//    @FindBy(xpath = "//*[@id=\"u_0_k_w/\"]/div/div[1]/button")
+//    public WebElement createNewAccountButton;
+//
+//    @FindBy(xpath = "//a[@href='/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjUwNTI1MTI4LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D']")
+//    public WebElement alreadyHaveAnAccountButton;
+
+//    @FindBy(id = "email")
+//    public WebElement emailInputField;
+//
+//    @FindBy(id = "pass")
+//    public WebElement passInputField;
+//
+//    @FindBy(id = "loginbutton")
+//    public WebElement loginButton;
+
 
     public BooksPage() {
         webDriverWait.until(ExpectedConditions.urlContains(url));
