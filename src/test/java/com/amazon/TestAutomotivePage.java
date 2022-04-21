@@ -37,10 +37,22 @@ public class TestAutomotivePage extends TestBasePage {
     public void testfluidPumpVideo() {
         Homepage homepage = new Homepage();
         AutomotivePage automotivePage = homepage.navigateToAutomotivePage();
-        automotivePage.automotiveScrollOption3.click();
-        automotivePage.searchSubmitButton3.click();
-        automotivePage.oilnFluidsButton3.click();
-        automotivePage.oilnFluidPumpItem.click();
+        automotivePage.automotiveScrollOption4.click();
+        automotivePage.searchSubmitButton4.click();
+        automotivePage.oilnFluidsButton4.click();
+        automotivePage.oilnFluidPumpItem4.click();
         automotivePage.fluidPumpVideo.click();
+    }
+
+    @Test
+    public void testAddingVehicle() throws InterruptedException {
+        Homepage homepage = new Homepage();
+        AutomotivePage automotivePage = homepage.navigateToAutomotivePage();
+        automotivePage.automotiveScrollOption5.click();
+        automotivePage.searchSubmitButton5.click();
+        automotivePage.bestSellerButton .click();
+
+
+        Thread.sleep(3000);
     }
 }

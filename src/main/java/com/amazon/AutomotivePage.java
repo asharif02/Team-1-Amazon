@@ -62,6 +62,15 @@ public class AutomotivePage extends BasePage {
     public WebElement fluidPumpVideo;
 
     //testcase5
+    @FindBy(xpath = "//option[@value='search-alias=automotive']")
+    public WebElement automotiveScrollOption5;
+
+    @FindBy(xpath = "//*[@id='nav-search-submit-button']")
+    public WebElement searchSubmitButton5;
+
+    @FindBy(xpath = "//*[@id='nav-subnav']/a[4]/span")
+    public WebElement bestSellerButton;
+
 
 
 
