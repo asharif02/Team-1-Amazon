@@ -28,6 +28,9 @@ public class TestRegistryPage extends TestBasePage {
         Homepage homepage= new Homepage();
         RegistryPage registryPage=homepage.navigateToRegistryPage();
         registryPage.helpButton.click();
+        registryPage.findMoreSolutionSearchingBar.click();
+
+
 
 
     }

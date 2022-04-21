@@ -22,6 +22,10 @@ public class RegistryPage extends BasePage {
     @FindBy(xpath = "(//span[@class=\"gr-subnav__item-text\"])[6]")
     public WebElement helpButton;
 
+    @FindBy(xpath = "//input[@id='helpsearch']")
+    public WebElement findMoreSolutionSearchingBar;
+
+
 
     public RegistryPage(){
         webDriverWait.until(ExpectedConditions.urlContains(URL));
