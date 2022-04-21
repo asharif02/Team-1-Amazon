@@ -24,7 +24,7 @@ public class AmazonHomePage extends BasePage {
     public WebElement realismStyleButton;
     // endregion
 
-    // region Part 2
+    // region Test Case 2 Web Elements
     @FindBy(xpath = "//img[@alt='Electronics']")
     public WebElement electronicsButton;
 
@@ -92,9 +92,13 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "(//a[@class='teaser-category-page-link mirai-clickable'])[1]")
     public WebElement exploreMoreCoffeeTablesPanel;
+
+
+
+
     // endregion
 
-    // region Part 4
+    // region Test Case 4 Web Elements
     @FindBy(xpath = "(//span[@class='nav-a-content'])[9]")
     public WebElement gardenOutdoorHyperlinkHover;
 
@@ -143,8 +147,6 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "(//div[@data-asin='B08PQBB934'])[3]")
     public WebElement firstChandelierItem;
-
-
     // endregion
 
 

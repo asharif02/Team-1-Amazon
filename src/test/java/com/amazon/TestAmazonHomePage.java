@@ -136,7 +136,7 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.roomStyleDropdownBar.click();
         amazonHomePage.rightCarouselButton.click();
         amazonHomePage.modernRoomStyleImage.click();
-        Thread.sleep(1500);
+        Thread.sleep(1500); // I know we're not supposed to use this lol
         amazonHomePage.viewProductsButton.click();
         amazonHomePage.chandelierTab.click();
         amazonHomePage.firstChandelierItem.click();
