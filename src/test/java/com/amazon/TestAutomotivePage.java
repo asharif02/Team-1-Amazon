@@ -15,7 +15,7 @@ public class TestAutomotivePage extends TestBasePage {
     }
 
     @Test
-    public void testoilnFluidsButton(){
+    public void testoilnFluidsButton() {
         Homepage homepage = new Homepage();
         AutomotivePage automotivePage = homepage.navigateToAutomotivePage();
         automotivePage.automotiveScrollOption2.click();
@@ -31,5 +31,16 @@ public class TestAutomotivePage extends TestBasePage {
         automotivePage.searchSubmitButton3.click();
         automotivePage.oilnFluidsButton3.click();
         automotivePage.oilnFluidPumpItem.click();
+    }
+
+    @Test
+    public void testfluidPumpVideo() {
+        Homepage homepage = new Homepage();
+        AutomotivePage automotivePage = homepage.navigateToAutomotivePage();
+        automotivePage.automotiveScrollOption3.click();
+        automotivePage.searchSubmitButton3.click();
+        automotivePage.oilnFluidsButton3.click();
+        automotivePage.oilnFluidPumpItem.click();
+        automotivePage.fluidPumpVideo.click();
     }
 }
