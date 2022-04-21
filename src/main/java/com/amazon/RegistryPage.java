@@ -13,8 +13,6 @@ public class RegistryPage extends BasePage {
     @FindBy(xpath = "//a[@href='/registries/birthday?ref_=gr-landing']")
     public WebElement KidsBirthdaysButton;
 
-    // "//a[@href='/registries/birthday?ref_=gr-landing']"
-    //  "(//img[@class='gr-card__img'])[3]")
 
 //Test case 2
     @FindBy(xpath = "//span[@class='a-button a-button-dropdown gr-find-stripe__type']")
@@ -34,6 +32,10 @@ public class RegistryPage extends BasePage {
 
     @FindBy(xpath = "//a[@href='/registries/custom?ref_=registries_subnav']")
     public WebElement customGiftListButton;
+
+    @FindBy(xpath = "//a[@class='a-link-normal gr-btn gr-btn--rounded gr-text gr-text--sm gr-hero__cta gr-home-btn theme-custom']")
+    public WebElement createAcustomGiftList;
+
 
     //Test case 5
 

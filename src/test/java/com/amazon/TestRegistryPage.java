@@ -8,14 +8,15 @@ import org.testng.annotations.Test;
 
 public class TestRegistryPage extends TestBasePage {
 
-
+// Test case #1
     @Test
     public void testBirthdayGiftListButton(){
         Homepage homepage=new Homepage();
         RegistryPage registryPage= homepage.navigateToRegistryPage();
         registryPage.KidsBirthdaysButton.click();
-//birthdayGiftListButton
+
     }
+    // Test case #2
     @Test
     public void testSerchingBarDropDownIcon()  {
 
@@ -26,6 +27,7 @@ public class TestRegistryPage extends TestBasePage {
 
 
     }
+    //Test case #3
 
     @Test
     public void testHelpButton(){
@@ -36,14 +38,13 @@ public class TestRegistryPage extends TestBasePage {
         registryPage.findMoreSolutionSearchingBar.sendKeys("Return Policy");
         registryPage.findMoreSolutionSearchingBar.sendKeys(Keys.ENTER);
 
-
         String actualtext=driver.findElement(By.xpath("(//*[@id='a-page']//h2)[1]")).getText();
         String expectedtext="Returns & Refunds";
         Assert.assertEquals(actualtext,expectedtext);
 
-////a[@name='GUID-2415E229-D628-46DB-B0EB-C14E32BF5239']
-        //(//*[@id='a-page']//h2)[1]
+
     }
+    //Test case #4
 
     @Test
     public void testCustomGiftListButton(){
@@ -51,6 +52,7 @@ public class TestRegistryPage extends TestBasePage {
         Homepage homepage = new Homepage();
         RegistryPage registryPage=homepage.navigateToRegistryPage();
         registryPage.customGiftListButton.click();
+        registryPage.createAcustomGiftList.click();
 
     }
 
