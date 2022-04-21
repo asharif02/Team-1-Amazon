@@ -111,10 +111,38 @@ public class AmazonHomePage extends BasePage {
     public WebElement noThanksToWarrantyCoverageButton;
     // endregion
 
-    // region Part 5
+    // region Test Case 5 Web Elements
     @FindBy(xpath = "//select[@aria-describedby='searchDropdownDescription']")
     public WebElement allDepartmentsDropdownMenu;
 
+    @FindBy(xpath = "//a[@href='/Shop-by-Room/b/?ie=UTF8&node=14544458011&ref_=sv_hg_1']")
+    public WebElement shopByRoomHoverMenu;
+
+    @FindBy(xpath = "//img[@src='https://m.media-amazon.com/images/G/01/img17/home/mega-subnav/2-SBR-See-More-2._CB511895964_.jpg']")
+    public WebElement seeMoreRoomPanel;
+
+    @FindBy(xpath = "//img[@alt='Discover Rooms. Shop by room style']")
+    public WebElement visitShowroomButton;
+
+    @FindBy(xpath = "//button[@id='sbl_filter_roomstyle_button']")
+    public WebElement roomStyleDropdownBar;
+
+    @FindBy(xpath = "(//span[@class='a-button-inner scenes-refinements-carousel-button-inner scenes-refinements-carousel-button-inner-right'])[2]")
+    public WebElement rightCarouselButton;
+
+    @FindBy(xpath = "//img[@alt='Modern']")
+    public WebElement modernRoomStyleImage;
+
+//    @FindBy(xpath = "(//span[@data-view-products='{\"physicalId\":\"81Fll6j-sWL\"}'])[2]")
+//    @FindBy(xpath = "//div[@data-physical-id='81Fll6j-sWL']")
+    @FindBy(xpath = "(//img[@src='https://m.media-amazon.com/images/I/81Fll6j-sWL._AC_UL750_.jpg'])[1]")
+    public WebElement viewProductsButton;
+
+    @FindBy(xpath = "(//div[@data-asin='B08PQBB934'])[1]")
+    public WebElement chandelierTab;
+
+    @FindBy(xpath = "(//div[@data-asin='B08PQBB934'])[3]")
+    public WebElement firstChandelierItem;
 
 
     // endregion
