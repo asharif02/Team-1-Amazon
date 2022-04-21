@@ -10,10 +10,11 @@ public class RegistryPage extends BasePage {
     private static final String URL = "https://www.amazon.com";
 
 //Test case 1
-    @FindBy(xpath = "(//img[@class='gr-card__img'])[3]")
-    public WebElement birthdayGiftListButton;
+    @FindBy(xpath = "//a[@href='/registries/birthday?ref_=gr-landing']")
+    public WebElement KidsBirthdaysButton;
 
     // "//a[@href='/registries/birthday?ref_=gr-landing']"
+    //  "(//img[@class='gr-card__img'])[3]")
 
 //Test case 2
     @FindBy(xpath = "//span[@class='a-button a-button-dropdown gr-find-stripe__type']")

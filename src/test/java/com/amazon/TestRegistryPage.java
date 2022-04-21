@@ -13,8 +13,8 @@ public class TestRegistryPage extends TestBasePage {
     public void testBirthdayGiftListButton(){
         Homepage homepage=new Homepage();
         RegistryPage registryPage= homepage.navigateToRegistryPage();
-        registryPage.birthdayGiftListButton.click();
-
+        registryPage.KidsBirthdaysButton.click();
+//birthdayGiftListButton
     }
     @Test
     public void testSerchingBarDropDownIcon()  {
@@ -41,7 +41,8 @@ public class TestRegistryPage extends TestBasePage {
         String expectedtext="Returns & Refunds";
         Assert.assertEquals(actualtext,expectedtext);
 
-
+////a[@name='GUID-2415E229-D628-46DB-B0EB-C14E32BF5239']
+        //(//*[@id='a-page']//h2)[1]
     }
 
     @Test
