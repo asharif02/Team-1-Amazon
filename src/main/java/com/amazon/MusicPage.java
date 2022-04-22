@@ -10,7 +10,7 @@ public class MusicPage extends BasePage {
     public static final String url = "https://www.amazon.com";
 
     // Test Case 1, Navigate to Music page
-    @FindBy(xpath = "//div[@class='nav-a ']")
+    @FindBy(xpath = "//*[@id=\"nav-xshop\"]/a[8]")
     public WebElement MusicTab;
 
 }
