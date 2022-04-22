@@ -50,7 +50,8 @@ public class TestAutomotivePage extends TestBasePage {
         AutomotivePage automotivePage = homepage.navigateToAutomotivePage();
         automotivePage.automotiveScrollOption5.click();
         automotivePage.searchSubmitButton5.click();
-        automotivePage.bestSellerButton .click();
+        automotivePage.bestSellerButton.click();
+        automotivePage.bestSellerInAutomotive.click();
 
 
         Thread.sleep(3000);

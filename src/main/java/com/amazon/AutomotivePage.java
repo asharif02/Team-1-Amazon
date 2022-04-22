@@ -71,6 +71,9 @@ public class AutomotivePage extends BasePage {
     @FindBy(xpath = "//*[@id='nav-subnav']/a[4]/span")
     public WebElement bestSellerButton;
 
+    @FindBy(xpath = "//*[@id=\"p13n-asin-index-0\"]/div[2]/div/a[2]/span/div")
+    public  WebElement bestSellerInAutomotive;
+
 
 
 
