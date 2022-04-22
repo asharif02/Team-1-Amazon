@@ -28,7 +28,7 @@ public class RegistryPage extends BasePage {
     @FindBy(xpath = "//input[@id='helpsearch']")
     public WebElement findMoreSolutionSearchingBar;
 
-    //Test case 4
+//Test case 4
 
     @FindBy(xpath = "//a[@href='/registries/custom?ref_=registries_subnav']")
     public WebElement customGiftListButton;
@@ -37,9 +37,22 @@ public class RegistryPage extends BasePage {
     public WebElement createAcustomGiftList;
 
 
-    //Test case 5
+//Test case 5
 
-    //@FindBy(xpath = "")
+   @FindBy(xpath = "//input[@class='gr-text gr-text--sm gr-text--tertiary gr-find-stripe__name']")
+   public WebElement registrantNameSearchBar;
+
+    @FindBy(xpath = "//span[@class='a-button a-button-dropdown gr-find-stripe__type']")
+    public WebElement serachingBarDropDownIconOfRegistrantName;
+
+   @FindBy(xpath = "//li[@aria-labelledby='dropdown1_1']")
+   public WebElement babyRegistryDropDownLink;
+
+
+
+
+
+
 
 
 

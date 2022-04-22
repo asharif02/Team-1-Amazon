@@ -42,7 +42,6 @@ public class TestRegistryPage extends TestBasePage {
         String expectedtext="Returns & Refunds";
         Assert.assertEquals(actualtext,expectedtext);
 
-
     }
     //Test case #4
 
@@ -55,11 +54,32 @@ public class TestRegistryPage extends TestBasePage {
         registryPage.createAcustomGiftList.click();
 
     }
+    //Test case #5
+
+    @Test
+    public void testRegistrantNameSearchBar(){
+
+        Homepage homepage =new Homepage();
+        RegistryPage registryPage= homepage.navigateToRegistryPage();
+        registryPage.registrantNameSearchBar.click();
+        registryPage.serachingBarDropDownIconOfRegistrantName.click();
+        registryPage.babyRegistryDropDownLink.click();
+        registryPage.registrantNameSearchBar.sendKeys("Roman");
+        registryPage.registrantNameSearchBar.sendKeys(Keys.ENTER);
 
 
-
+        String actualtext=driver.findElement(By.xpath("//span[@id='numOfResultsText']")).getText();
+        String expectedtext="100 search results for \" Roman \"";
+        Assert.assertEquals(actualtext,expectedtext);
 
 
 
     }
+
+
+
+
+
+
+}
 
