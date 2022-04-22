@@ -63,7 +63,7 @@ public class TestAmazonHomePage extends TestBasePage {
 
     // region 3rd test case (modify assertion for survey feedback)
     @Test
-    public void testFillOutSendFeedbackSurvey() {
+    public void testFillOutSendFeedbackSurvey() throws InterruptedException {
         Homepage homepage = new Homepage();
         AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
         Actions actions = new Actions(driver);
@@ -72,23 +72,32 @@ public class TestAmazonHomePage extends TestBasePage {
         actions.moveToElement(amazonHomePage.discoverHyperlinkHover).build().perform();
         actions.moveToElement(amazonHomePage.discoverPanel).click().build().perform();
 
-        amazonHomePage.startLikingNowButton.click();
-
-        // SO MUCH CLICKING LOL MY BAD
-        amazonHomePage.dislikeButtonOne.click();
-        amazonHomePage.likeButtonOne.click();
-        amazonHomePage.likeButtonTwo.click();
-        amazonHomePage.likeButtonThree.click();
-        amazonHomePage.dislikeButtonTwo.click();
-        amazonHomePage.dislikeButtonThree.click();
-        amazonHomePage.likeButtonFour.click();
-        amazonHomePage.likeButtonFive.click();
-        amazonHomePage.likeButtonSix.click();
-        amazonHomePage.exploreMoreCoffeeTablesPanel.click();
+//        amazonHomePage.startLikingNowButton.click();
+//
+//        // SO MUCH CLICKING LOL MY BAD
+//        amazonHomePage.dislikeButtonOne.click();
+//        amazonHomePage.likeButtonOne.click();
+//        amazonHomePage.likeButtonTwo.click();
+//        amazonHomePage.likeButtonThree.click();
+//        amazonHomePage.dislikeButtonTwo.click();
+//        amazonHomePage.dislikeButtonThree.click();
+//        amazonHomePage.likeButtonFour.click();
+//        amazonHomePage.likeButtonFive.click();
+//        amazonHomePage.likeButtonSix.click();
+//        amazonHomePage.exploreMoreCoffeeTablesPanel.click();
 
         // Feedback Survey
         amazonHomePage.sendFeedbackButton.click();
         amazonHomePage.extremelyHelpfulRadioButton.click();
+        amazonHomePage.findASpecificProductCheckbox.click();
+        amazonHomePage.getInspirationCheckbox.click();
+        amazonHomePage.findMyStyleCheckbox.click();
+
+//        That this survey was automated
+////        By removing this question, one less text field to send keys to lol
+////                Nope
+
+        Thread.sleep(2000);
 
         // Assertion
         String actualTitle = driver.getTitle();
@@ -153,8 +162,10 @@ public class TestAmazonHomePage extends TestBasePage {
 
         while(it.hasNext()) {
             driver.switchTo().window(it.next());
-//            System.out.println(driver.getTitle());
+            System.out.println(driver.getTitle());
         }
+
+        System.out.println(driver.getTitle()); // confirming that it prints out the title of the LAST tab in the set
 
         // Assertion
         String actualTitle = driver.getTitle();

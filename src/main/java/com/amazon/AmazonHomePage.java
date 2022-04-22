@@ -105,6 +105,9 @@ public class AmazonHomePage extends BasePage {
     @FindBy(xpath = "//input[@value='e177f6a5-03f3-419e-87dd-73c24f0caf25']")
     public WebElement getInspirationCheckbox;
 
+    @FindBy(xpath = "//input[@value='26bcfaa3-1528-4164-b95f-28d64cf2e209']")
+    public WebElement findMyStyleCheckbox;
+
 
     // endregion
 
@@ -172,8 +175,6 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//a[@class='a-link-normal 5star']")
     public WebElement fiveStarReviewLink;
-
-
     // endregion
 
 
