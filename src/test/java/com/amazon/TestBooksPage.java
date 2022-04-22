@@ -1,8 +1,11 @@
 package com.amazon;
 
 import base.TestBasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import javax.naming.directory.SearchResult;
@@ -62,5 +65,16 @@ public class TestBooksPage extends TestBasePage {
         booksPage.firstNameInputField.sendKeys("zohra");
         booksPage.lastNameInputField.sendKeys("lamrani");
         booksPage.emailInputField.sendKeys("tadefi_01@yahoo.fr");
+        Thread.sleep(3000);
+   }
+   @Test
+    public void testDealsInBooks() throws InterruptedException {
+    Homepage homepage = new Homepage();
+    BooksPage booksPage = homepage.navigateToBooksPage();
+    booksPage.dealsInBooksLink.click();
+    Thread.sleep(2000);
+    booksPage.focusBookLink.click();
+    booksPage.addToCartButton.click();
+    Thread.sleep(2000);
    }
 }

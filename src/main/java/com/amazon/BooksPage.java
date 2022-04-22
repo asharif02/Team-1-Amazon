@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -76,11 +77,20 @@ public class BooksPage extends BasePage {
     @FindBy(xpath = "//input[@name='reg_email__']")
     public WebElement emailInputField;
 
+    //TC-006
+    @FindBy(xpath = "//a[@href='/gp/browse.html?rw_useCurrentProtocol=1&node=45&ref_=bhp_brws_dibs']")
+    public WebElement dealsInBooksLink;
+
+    @FindBy(xpath = "//*[@src='https://m.media-amazon.com/images/I/41zDsn3OXIS.jpg']")
+    public WebElement focusBookLink;
+
+    @FindBy(xpath = "//input[@id='add-to-cart-button']")
+    public WebElement addToCartButton;
+
     public BooksPage() {
         webDriverWait.until(ExpectedConditions.urlContains(url));
         PageFactory.initElements(driver, this);
-        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
     }
 
   }
