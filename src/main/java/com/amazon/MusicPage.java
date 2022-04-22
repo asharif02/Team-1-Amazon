@@ -14,7 +14,12 @@ public class MusicPage extends BasePage {
     public WebElement MusicTab;
 
     // Test Case 2, Try it free button
-    @FindBy(xpath = "//*[@id=\"a-autoid-0-announce\"]")
+    @FindBy(xpath = "//*[@id=\"a-autoid-0\"]/span/a")
     public WebElement TryItFreeButton;
+
+    // Test Case 3, Open web player
+    @FindBy(xpath = "//*[@id=\"nav-subnav\"]/a[9]")
+    public WebElement OpenWebPlayer;
+
 
 }

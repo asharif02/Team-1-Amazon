@@ -20,4 +20,12 @@ public class TestMusicPage extends TestBasePage {
         MusicPage tryItFreeButton = homepage.navigateToMusicPage();
         tryItFreeButton.TryItFreeButton.click();
         }
+
+    // Test Case 3, Open web player
+    @Test
+    public void testOpenWebPlayer() {
+        Homepage homepage = new Homepage();
+        MusicPage openWebPlayer = homepage.navigateToMusicPage();
+        openWebPlayer.OpenWebPlayer.click();
+    }
 }
