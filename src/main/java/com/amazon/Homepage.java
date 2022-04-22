@@ -19,7 +19,8 @@ public class Homepage extends BasePage {
     @FindBy(xpath = "//a[@href='/amazon-fashion/b/?ie=UTF8&node=7141123011&ref_=nav_cs_fashion']")
     public WebElement fashionPage;
 
-    @FindBy(xpath = "//a[@href='/Kindle-eBooks/b/?ie=UTF8&node=154606011&ref_=nav_cs_kindle_books']")
+    //@FindBy(xpath = "//a[@href='/Kindle-eBooks/b/?ie=UTF8&node=154606011&ref_=nav_cs_kindle_books']")
+    @FindBy(xpath = "//a[@data-csa-c-content-id='nav_cs_kindle_books']")
     public WebElement kindleBooksPage;
 
     @FindBy(xpath = "//a[@href='/music/unlimited?ref_=nav_cs_music']")
