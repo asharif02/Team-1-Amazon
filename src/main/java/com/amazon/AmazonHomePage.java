@@ -93,7 +93,17 @@ public class AmazonHomePage extends BasePage {
     @FindBy(xpath = "(//a[@class='teaser-category-page-link mirai-clickable'])[1]")
     public WebElement exploreMoreCoffeeTablesPanel;
 
+    @FindBy(xpath = "//a[@href='/forms/7243890f-4319-4c8a-9009-4225a207a89d']")
+    public WebElement sendFeedbackButton;
 
+    @FindBy(xpath = "//input[@value='0f636346-1cf6-424c-9ac7-80adb5fffe52']")
+    public WebElement extremelyHelpfulRadioButton;
+
+    @FindBy(xpath = "//input[@value='00033599-24c9-43a9-9ebe-b5a598299a47']")
+    public WebElement findASpecificProductCheckbox;
+
+    @FindBy(xpath = "//input[@value='e177f6a5-03f3-419e-87dd-73c24f0caf25']")
+    public WebElement getInspirationCheckbox;
 
 
     // endregion
@@ -147,6 +157,23 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "(//div[@data-asin='B08PQBB934'])[3]")
     public WebElement firstChandelierItem;
+    // endregion
+
+
+    // region Test Case 6 Web Elements
+    @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
+    public WebElement amazonMainSearchBar;
+
+    @FindBy(xpath = "nav-search-submit-button")
+    public WebElement searchSubmitButton;
+
+    @FindBy(xpath = "(//img[@data-image-index='5'])[1]")
+    public WebElement firstHeatedBlanketResult;
+
+    @FindBy(xpath = "//a[@class='a-link-normal 5star']")
+    public WebElement fiveStarReviewLink;
+
+
     // endregion
 
 

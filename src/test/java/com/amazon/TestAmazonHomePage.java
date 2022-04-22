@@ -29,7 +29,7 @@ public class TestAmazonHomePage extends TestBasePage {
         // Assertion
         String actualText = driver.findElement(By.xpath("(//*[text()='Wall Art'])[3]")).getText();
         String expectedText = "Wall Art";
-        System.out.println("Enjoy Shopping for Realism " + actualText);
+//        System.out.println("Enjoy Shopping for Realism " + actualText);
         Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }
@@ -87,6 +87,8 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.exploreMoreCoffeeTablesPanel.click();
 
         // Feedback Survey
+        amazonHomePage.sendFeedbackButton.click();
+        amazonHomePage.extremelyHelpfulRadioButton.click();
 
         // Assertion
         String actualTitle = driver.getTitle();
@@ -158,6 +160,26 @@ public class TestAmazonHomePage extends TestBasePage {
         String actualTitle = driver.getTitle();
         String expectedTitle = "Chandeliers,6-Lights Sputnik Chandeliers Brushed Nickel Vintage Pendant Lighting Mid CentuModern Kitchen Dining Room Living Room Bedroom Ceiling Light Fixture - - Amazon.com";
         Assert.assertEquals(actualTitle, expectedTitle, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
+
+    }
+    // endregion
+
+    // region 6th test case
+    @Test
+    public void testReadingItemReviews() {
+        Homepage homepage = new Homepage();
+        AmazonHomePage amazonHomePage = homepage.navigateToAmazonHomePage();
+
+        // Navigation
+        amazonHomePage.amazonMainSearchBar.sendKeys("heated blanket");
+        amazonHomePage.amazonMainSearchBar.sendKeys(Keys.ENTER);
+        amazonHomePage.firstHeatedBlanketResult.click();
+        amazonHomePage.fiveStarReviewLink.click();
+
+        // Assertion
+        String actualText = driver.findElement(By.xpath("(//span[@class='a-dropdown-prompt'])[3]")).getText().toLowerCase();
+        String expectedText = "5 star only".toLowerCase();
+        Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }
     // endregion
