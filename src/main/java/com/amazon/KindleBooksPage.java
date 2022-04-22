@@ -14,25 +14,30 @@ public class KindleBooksPage extends BasePage {
 
 
 
-
-    //@FindBy(xpath = "(//a[@class='a-button a-button-image a-carousel-button a-carousel-goto-nextpage'])[2]")
-    public WebElement featuredAmazonOriginalBooks;
-
-
+//Test Case 1
     @FindBy(xpath = "(//i[@class='a-icon a-icon-checkbox'])[1]")
     public WebElement kindleUnlimitedCheckbox;
 
+//Test Case 2
     @FindBy(xpath = "//a[@href='/Amazon-Kindle-Ereader-Family/b/?ie=UTF8&node=6669702011&ref_=topnav_storetab_kstore']")
     public  WebElement buyAKindleTab;
 
+//Test Case 3
     @FindBy (xpath = "//a[@href='/b/?ie=UTF8&node=11552285011&ref_=sv_kstore_6']")
     public  WebElement kindleBookDealsTab;
 
+//Test Case 4
     @FindBy (xpath = "//*[text()='Prime Reading Eligible']")
     public WebElement primeReadingCheckbox;
 
+//Test Case 5
     @FindBy (xpath = "//img[@alt='Riley Thorn and the Blast from the Past']")
     public WebElement rileyThornBook;
+
+//Test Case 6
+    @FindBy(xpath = "//a[@href='/b/?ie=UTF8&node=14413390011&ref_=sv_kstore_4']")
+    public  WebElement bestSellersAndMoreTab;
+
 
 
     public KindleBooksPage() {
@@ -41,6 +46,7 @@ public class KindleBooksPage extends BasePage {
         PageFactory.initElements(driver, this);
 
     }
+
 
 }
 

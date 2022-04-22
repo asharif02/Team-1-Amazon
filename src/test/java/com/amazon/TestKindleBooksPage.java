@@ -14,16 +14,7 @@ import java.time.Duration;
 
 public class TestKindleBooksPage extends TestBasePage {
 
-    //@Test
-    public void testFeaturedAmazonOriginalBooks() throws InterruptedException {
-        Homepage homepage = new Homepage();
-        KindleBooksPage kindleBooksPage = homepage.navigateToKindleBooksPage();
-        Thread.sleep(1500);
-        kindleBooksPage.featuredAmazonOriginalBooks.click();
 
-
-
-    }
 
     @Test
     public  void  testKindleUnlimitedCheckbox() throws InterruptedException {
@@ -62,8 +53,6 @@ public class TestKindleBooksPage extends TestBasePage {
         kindleBooksPage.primeReadingCheckbox.click();
 
 
-
-
     }
 
     @Test
@@ -75,6 +64,17 @@ public class TestKindleBooksPage extends TestBasePage {
         kindleBooksPage.rileyThornBook.click();
 
 }
+
+    @Test
+    public void testBestSellersAndMoreTab(){
+        Homepage homepage = new Homepage();
+        KindleBooksPage kindleBooksPage = homepage.navigateToKindleBooksPage();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        kindleBooksPage.bestSellersAndMoreTab.click();
+
+
+    }
 
 
 }
