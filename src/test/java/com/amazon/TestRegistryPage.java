@@ -57,7 +57,7 @@ public class TestRegistryPage extends TestBasePage {
     //Test case #5
 
     @Test
-    public void testRegistrantNameSearchBar(){
+    public void testRegistrantNameSearchBar()  {
 
         Homepage homepage =new Homepage();
         RegistryPage registryPage= homepage.navigateToRegistryPage();
@@ -71,6 +71,21 @@ public class TestRegistryPage extends TestBasePage {
         String actualtext=driver.findElement(By.xpath("//span[@id='numOfResultsText']")).getText();
         String expectedtext="100 search results for \" Roman \"";
         Assert.assertEquals(actualtext,expectedtext);
+
+
+    }
+    //Test case #6
+    @Test
+
+    public void testHolidayGiftListButton(){
+
+        Homepage homepage =new Homepage();
+        RegistryPage registryPage = homepage.navigateToRegistryPage();
+        registryPage.holidaygiftlist.click();
+        registryPage.createAholidayGiftList.click();
+        //registryPage.signInemailInputBar.click();
+        registryPage.createYourAmazonAccountButton.click();
+
 
 
 

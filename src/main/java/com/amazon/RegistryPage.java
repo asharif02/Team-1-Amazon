@@ -45,8 +45,25 @@ public class RegistryPage extends BasePage {
     @FindBy(xpath = "//span[@class='a-button a-button-dropdown gr-find-stripe__type']")
     public WebElement serachingBarDropDownIconOfRegistrantName;
 
-   @FindBy(xpath = "//li[@aria-labelledby='dropdown1_1']")
-   public WebElement babyRegistryDropDownLink;
+    @FindBy(xpath = "//li[@aria-labelledby='dropdown1_1']")
+    public WebElement babyRegistryDropDownLink;
+
+
+   // Test case 6 "additional"
+
+     @FindBy(xpath = "//a[@href='/registries/holiday?ref_=registries_subnav']")
+     public WebElement holidaygiftlist;
+
+     @FindBy(xpath = "//a[@class='a-link-normal gr-btn gr-btn--rounded gr-text gr-text--sm gr-hero__cta gr-home-btn theme-custom']")
+     public WebElement createAholidayGiftList;
+
+     //@FindBy(xpath = "/input[@class='a-input-text a-span12 auth-autofocus auth-required-field']")
+    //@FindBy(xpath = "/div[@class='a-row a-spacing-base']")
+     @FindBy(xpath = "//span[@id='auth-create-account-link']")
+     public WebElement createYourAmazonAccountButton;
+
+
+
 
 
 
