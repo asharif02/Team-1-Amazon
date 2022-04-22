@@ -91,9 +91,6 @@ public class AutomotivePage extends BasePage {
     public WebElement searchBar;
 
 
-
-
-
     public AutomotivePage(){
         webDriverWait.until(ExpectedConditions.urlContains(URL));
         PageFactory.initElements(driver,this);
