@@ -45,7 +45,7 @@ public class TestAutomotivePage extends TestBasePage {
     }
 
     @Test
-    public void testAddingVehicle() throws InterruptedException {
+    public void testAddingVehicle() {
         Homepage homepage = new Homepage();
         AutomotivePage automotivePage = homepage.navigateToAutomotivePage();
         automotivePage.automotiveScrollOption5.click();
@@ -54,9 +54,5 @@ public class TestAutomotivePage extends TestBasePage {
         automotivePage.bestSellerInAutomotive.click();
         automotivePage.addingComboItemsToCart.click();
 
-
-
-
-        Thread.sleep(3000);
     }
 }
