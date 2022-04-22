@@ -52,6 +52,9 @@ public class TestAutomotivePage extends TestBasePage {
         automotivePage.searchSubmitButton5.click();
         automotivePage.bestSellerButton.click();
         automotivePage.bestSellerInAutomotive.click();
+        automotivePage.addingComboItemsToCart.click();
+
+
 
 
         Thread.sleep(3000);

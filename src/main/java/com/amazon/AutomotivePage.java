@@ -61,7 +61,7 @@ public class AutomotivePage extends BasePage {
     @FindBy(xpath = "//*[@id='a-autoid-15']")
     public WebElement fluidPumpVideo;
 
-    //testcase5
+    //testcase5- Testing the functionality of adding the bestSellerItem into the cart ( combo items )
     @FindBy(xpath = "//option[@value='search-alias=automotive']")
     public WebElement automotiveScrollOption5;
 
@@ -73,6 +73,9 @@ public class AutomotivePage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"p13n-asin-index-0\"]/div[2]/div/a[2]/span/div")
     public  WebElement bestSellerInAutomotive;
+
+    @FindBy (xpath = "//span[@class='a-button a-button-primary a-button-small _p13n-desktop-sims-fbt_fbt-desktop_add-all-button__1TRXG']")
+    public WebElement addingComboItemsToCart;
 
 
 
