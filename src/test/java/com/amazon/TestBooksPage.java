@@ -1,9 +1,15 @@
 package com.amazon;
 
 import base.TestBasePage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import javax.naming.directory.SearchResult;
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
+
+import static java.sql.DriverManager.getDriver;
 
 public class TestBooksPage extends TestBasePage {
 
@@ -46,13 +52,15 @@ public class TestBooksPage extends TestBasePage {
     }
 
     @Test
-    public void testBestBooksOfTheMonth() {
+    public void testBestBooksOfTheMonth() throws InterruptedException {
         Homepage homepage = new Homepage();
         BooksPage booksPage = homepage.navigateToBooksPage();
         booksPage.bestBooksOfTheMonth.click();
         booksPage.onFaceBookLink.click();
-//        booksPage.createNewAccountButton.click();
-//        booksPage.alreadyHaveAnAccountButton.click();
+        Thread.sleep(2000);
+        booksPage.createNewAccountButton.click();
+        booksPage.firstNameInputField.sendKeys("zohra");
+        booksPage.lastNameInputField.sendKeys("lamrani");
+        booksPage.emailInputField.sendKeys("tadefi_01@yahoo.fr");
    }
-
 }
