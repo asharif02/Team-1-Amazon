@@ -1,6 +1,7 @@
 package com.amazon;
 
 import base.TestBasePage;
+import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
 public class TestAutomotivePage extends TestBasePage {
@@ -54,5 +55,16 @@ public class TestAutomotivePage extends TestBasePage {
         automotivePage.bestSellerInAutomotive.click();
         automotivePage.addingComboItemsToCart.click();
 
+    }
+
+    @Test
+    public void shoppingMobil1() {
+        Homepage homepage = new Homepage();
+        AutomotivePage automotivePage = homepage.navigateToAutomotivePage();
+        automotivePage.automotiveScrollOption6.click();
+        automotivePage.searchSubmitButton6.click();
+        automotivePage.shopNowButton.click();
+        automotivePage.searchBar.sendKeys("Mobil 1");
+        automotivePage.searchBar.sendKeys(Keys.ENTER);
     }
 }

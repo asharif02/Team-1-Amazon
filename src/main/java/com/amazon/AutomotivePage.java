@@ -77,6 +77,19 @@ public class AutomotivePage extends BasePage {
     @FindBy (xpath = "//span[@class='a-button a-button-primary a-button-small _p13n-desktop-sims-fbt_fbt-desktop_add-all-button__1TRXG']")
     public WebElement addingComboItemsToCart;
 
+    //testCase6- searchbar functionality test in shopNow search option.
+    @FindBy(xpath = "//option[@value='search-alias=automotive']")
+    public WebElement automotiveScrollOption6;
+
+    @FindBy(xpath = "//*[@id='nav-search-submit-button']")
+    public WebElement searchSubmitButton6;
+
+    @FindBy (xpath = "//img[@src='https://m.media-amazon.com/images/G/01/Auto/bubba_wallace/INDA-P00005572_Amazon_Bubba_Wallace_CTA-blue.png']")
+    public WebElement shopNowButton;
+
+    @FindBy (xpath = "//*[contains(@placeholder, \"Search all Mobil 1 Synthetic Motor Oils\")]")
+    public WebElement searchBar;
+
 
 
 
