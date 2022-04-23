@@ -16,13 +16,13 @@
 ### *KPI’s (Key Performance Indicator)*
 - ***Individual Team Member progress***
   - *'#' of Tests written*
-   - Abdi - 6
-   - Zohra - 6
-   - Roman - 6
-   - Malik - 6
-   - Luc - 6
-   - Marwa - 6
-   - Thuwaiba - 0
+    - Abdi - 6
+    - Zohra - 6
+    - Roman - 6
+    - Malik - 6
+    - Luc - 6
+    - Marwa - 6
+    - Thuwaiba - 0
 - ***Lessons learned***
   - *You can lead a horse to water, but you can't make it drink (shoutout to Sami)*
 - ***Positives***
