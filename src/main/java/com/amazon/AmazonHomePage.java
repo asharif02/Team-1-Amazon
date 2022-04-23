@@ -184,7 +184,6 @@ public class AmazonHomePage extends BasePage {
     public WebElement firstChandelierItem;
     // endregion
 
-
     // region Test Case 6 Web Elements
     @FindBy(xpath = "//input[@id='twotabsearchtextbox']")
     public WebElement amazonMainSearchBar;
