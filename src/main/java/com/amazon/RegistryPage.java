@@ -62,6 +62,24 @@ public class RegistryPage extends BasePage {
      @FindBy(xpath = "//span[@id='auth-create-account-link']")
      public WebElement createYourAmazonAccountButton;
 
+     @FindBy(xpath = "//input[@class='a-input-text a-span12 auth-autofocus auth-required-field auth-contact-verification-request-info']")
+     public WebElement createAccountYourNameInputField;
+
+     @FindBy(xpath = "//input[@name='email']")
+     public WebElement createAccountEmailInputField;
+
+     @FindBy(xpath = "//input[@name='password']")
+     public WebElement createAccountPasswordInputField;
+
+     @FindBy(xpath = "//input[@name='passwordCheck']")
+     public WebElement getCreateAccountReenterPasswordInputField;
+
+     @FindBy(xpath = "//input[@type='submit']")
+     public WebElement CreateYourAmazonAccountButton2;
+
+     //@FindBy(xpath = "//*[@id=\"verification-code-form\"]/div[4]/div[1]/h1")
+     //public WebElement verifyEmailAddressText;
+
 
 
 

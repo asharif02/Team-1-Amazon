@@ -85,6 +85,21 @@ public class TestRegistryPage extends TestBasePage {
         registryPage.createAholidayGiftList.click();
         //registryPage.signInemailInputBar.click();
         registryPage.createYourAmazonAccountButton.click();
+        registryPage.createAccountYourNameInputField.sendKeys("Lucy");
+        registryPage.createAccountEmailInputField.sendKeys("romangadisso74@gmail.com");
+        registryPage.createAccountPasswordInputField.sendKeys("123456");
+        registryPage.getCreateAccountReenterPasswordInputField.sendKeys("123456");
+        registryPage.CreateYourAmazonAccountButton2.click();
+
+        //registryPage.verifyEmailAddressText.sendKeys(Keys.ENTER);
+
+        //String actualtext = driver.findElement(By.xpath("//*[@id=\"verification-code-form\"]/div[4]/div[1]/h1")).getText();
+        //String expectedtext = " Verify email address";
+        //Assert.assertEquals(actualtext,expectedtext);
+
+
+
+
 
 
 
