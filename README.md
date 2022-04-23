@@ -15,6 +15,6 @@
 
 ### KPI’s (Key Performance Indicator)
 - Individual Team Member progress
-  - # of Tests written
+  - '#' of Tests written
 - Lessons learned
 - Positives
