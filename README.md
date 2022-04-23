@@ -10,8 +10,8 @@
 - Team members are responsible for
   - Pulling/cloning the project
    - Make sure your local repo points to the remote repo
- - Each member will create their own branch
- - Each member will be assigned a different page within the application
+  - Each member will create their own branch
+  - Each member will be assigned a different page within the application
 
 ### *KPI’s (Key Performance Indicator)*
 - ***Individual Team Member progress***
