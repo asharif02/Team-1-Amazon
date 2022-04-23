@@ -6,10 +6,10 @@
 - The group must work together to create your group’s:
   - Project structure
   - Github repository
-   - Add all group members as contributors to the repo
+    - Add all group members as contributors to the repo
 - Team members are responsible for
   - Pulling/cloning the project
-   - Make sure your local repo points to the remote repo
+    - Make sure your local repo points to the remote repo
   - Each member will create their own branch
   - Each member will be assigned a different page within the application
 
