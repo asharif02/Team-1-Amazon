@@ -77,7 +77,7 @@ public class AutomotivePage extends BasePage {
     @FindBy (xpath = "//span[@class='a-button a-button-primary a-button-small _p13n-desktop-sims-fbt_fbt-desktop_add-all-button__1TRXG']")
     public WebElement addingComboItemsToCart;
 
-    //testCase6- searchbar functionality test in shopNow search option.
+    //testCase6- searchbar functionality test in shopNow search by entering a keyword
     @FindBy(xpath = "//option[@value='search-alias=automotive']")
     public WebElement automotiveScrollOption6;
 

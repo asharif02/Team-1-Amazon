@@ -2,6 +2,7 @@ package com.amazon;
 
 import base.TestBasePage;
 import org.openqa.selenium.Keys;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class TestAutomotivePage extends TestBasePage {
