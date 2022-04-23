@@ -12,7 +12,7 @@ import java.net.URL;
 public class AutomotivePage extends BasePage {
     private static final String URL = "https://www.amazon.com";
 
-    //TestCase1- Navigating to automotive button and testing the Car Care button functionality
+    //TestCase1- Navigating to automotive button and testing the Car Care button functionality.
     @FindBy(xpath = "//a[@title='Car Care']")
     public WebElement carCareButton;
 
@@ -22,7 +22,7 @@ public class AutomotivePage extends BasePage {
     @FindBy(xpath = "//*[@id='nav-search-submit-button']")
     public WebElement searchSubmitButton;
 
-    //testCase2-  Testing the Oil & Fluids Button functionality
+    //testCase2-  Testing the Oil & Fluids Button functionality on the Automotive Homepage.
     @FindBy(xpath = "//option[@value='search-alias=automotive']")
     public WebElement automotiveScrollOption2;
 
@@ -32,7 +32,7 @@ public class AutomotivePage extends BasePage {
     @FindBy(xpath = "//a[@title='Oils & Fluids']")
     public WebElement oilnFluidsButton;
 
-    //testCase3- Functionality of Fluid pump item button in Oil & Fluids category
+    //testCase3- Functionality of Fluid pump item button in Oil & Fluids category.
     @FindBy(xpath = "//option[@value='search-alias=automotive']")
     public WebElement automotiveScrollOption3;
 
