@@ -14,6 +14,8 @@ import java.util.Set;
 
 public class TestAmazonHomePage extends TestBasePage {
 
+    // test cases start off basic but get more complex :)
+
     // region 1st test case
     @Test
     public void testViewWallArtItemListings() {
@@ -27,9 +29,9 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.realismStyleButton.click();
 
         // Assertion
-        String actualText = driver.findElement(By.xpath("(//*[text()='Wall Art'])[3]")).getText();
+        String actualText = amazonHomePage.wallArtText.getText();
         String expectedText = "Wall Art";
-//        System.out.println("Enjoy Shopping for Realism " + actualText);
+        System.out.println("Realism " + actualText + " is the best kind of Art!");
         Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }
@@ -52,16 +54,15 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.goSearchButton.click();
 
         // Assertion
-        WebElement highPriceValue = driver.findElement(By.xpath("//li[@id='p_36/price-range']//input[@value='1,500']"));
-        String actualText = highPriceValue.getAttribute("value");
+        String actualText = amazonHomePage.highPriceValue.getAttribute("value");
         String expectedText = "1,500";
-        System.out.println("Currently viewing 2021 TVs that cost no more than $" + actualText + " dollars.");
+        System.out.println("I REFUSE to pay more than $" + actualText + " dollars for a TV!");
         Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }
     // endregion
 
-    // region 3rd test case (modify assertion for survey feedback)
+    // region 3rd test case
     @Test
     public void testFillOutSendFeedbackSurvey() throws InterruptedException {
         Homepage homepage = new Homepage();
@@ -72,19 +73,8 @@ public class TestAmazonHomePage extends TestBasePage {
         actions.moveToElement(amazonHomePage.discoverHyperlinkHover).build().perform();
         actions.moveToElement(amazonHomePage.discoverPanel).click().build().perform();
 
-//        amazonHomePage.startLikingNowButton.click();
-//
-//        // SO MUCH CLICKING LOL MY BAD
-//        amazonHomePage.dislikeButtonOne.click();
-//        amazonHomePage.likeButtonOne.click();
-//        amazonHomePage.likeButtonTwo.click();
-//        amazonHomePage.likeButtonThree.click();
-//        amazonHomePage.dislikeButtonTwo.click();
-//        amazonHomePage.dislikeButtonThree.click();
-//        amazonHomePage.likeButtonFour.click();
-//        amazonHomePage.likeButtonFive.click();
-//        amazonHomePage.likeButtonSix.click();
-//        amazonHomePage.exploreMoreCoffeeTablesPanel.click();
+        // disregard all this clicking lol
+//        amazonHomePage.dislikeButtonOne.click(); amazonHomePage.likeButtonOne.click(); amazonHomePage.likeButtonTwo.click(); amazonHomePage.likeButtonThree.click(); amazonHomePage.dislikeButtonTwo.click(); amazonHomePage.dislikeButtonThree.click(); amazonHomePage.likeButtonFour.click(); amazonHomePage.likeButtonFive.click(); amazonHomePage.likeButtonSix.click(); amazonHomePage.exploreMoreCoffeeTablesPanel.click();
 
         // Feedback Survey
         amazonHomePage.sendFeedbackButton.click();
@@ -93,16 +83,18 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.getInspirationCheckbox.click();
         amazonHomePage.findMyStyleCheckbox.click();
 
-//        That this survey was automated
-////        By removing this question, one less text field to send keys to lol
-////                Nope
-
+        amazonHomePage.textArea1.sendKeys("that this whole entire survey was automated!");
+        amazonHomePage.textArea2.sendKeys("by removing this question, one less text area to send keys to lol");
+        amazonHomePage.textArea3.sendKeys("nope");
+        amazonHomePage.surveySubmitButton.click();
         Thread.sleep(2000);
 
         // Assertion
-        String actualTitle = driver.getTitle();
-        String expectedTitle = "Discover your style - Coffee Tables | Amazon.com";
-        Assert.assertEquals(actualTitle, expectedTitle, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
+        String actualText = amazonHomePage.successfullySubmittedFormText.getText();
+
+        String expectedText = "You have successfully submitted this form.";
+        System.out.println("Congrats! " + actualText);
+        Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }
     // endregion
@@ -123,9 +115,9 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.noThanksToWarrantyCoverageButton.click();
 
         // Assertion
-        String actualText = driver.findElement(By.xpath("//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold']")).getText().toLowerCase();
-        String expectedText = "Added to Cart".toLowerCase();
-        System.out.println("Hammock was successfully " + actualText + "!");
+        String actualText = amazonHomePage.addedToCartConfirmationText.getText();
+        String expectedText = "Added to Cart";
+        System.out.println("Hammock was successfully " + actualText.toLowerCase() + "!");
         Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }
@@ -154,7 +146,7 @@ public class TestAmazonHomePage extends TestBasePage {
 
         // Product will open in new tab, I need to switch to it
         driver.findElement(By.cssSelector("body")).sendKeys(Keys.CONTROL +"t");
-        Thread.sleep(5000); // only put this because I wanted to actually see it switch tabs lol
+        Thread.sleep(3000); // only put this because I wanted to actually see it switch tabs lol
 
         // Getting the title of all opened tabs
         Set<String> tabs = driver.getWindowHandles();
@@ -188,8 +180,9 @@ public class TestAmazonHomePage extends TestBasePage {
         amazonHomePage.fiveStarReviewLink.click();
 
         // Assertion
-        String actualText = driver.findElement(By.xpath("(//span[@class='a-dropdown-prompt'])[3]")).getText().toLowerCase();
-        String expectedText = "5 star only".toLowerCase();
+        String actualText = amazonHomePage.fiveStarOnlyText.getText();
+        String expectedText = "5 star only";
+        System.out.println("I want to read " + actualText + " reviews!");
         Assert.assertEquals(actualText, expectedText, "ACTUAL DOES NOT MATCH EXPECTED RESULT");
 
     }

@@ -22,6 +22,9 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//a[@aria-label='Realism']")
     public WebElement realismStyleButton;
+
+    @FindBy(xpath = "(//*[text()='Wall Art'])[3]")
+    public WebElement wallArtText;
     // endregion
 
     // region Test Case 2 Web Elements
@@ -42,6 +45,9 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//span[@class='a-button-inner']//input[@type='submit']")
     public WebElement goSearchButton;
+
+    @FindBy(xpath = "//li[@id='p_36/price-range']//input[@value='1,500']")
+    public WebElement highPriceValue;
     // endregion
 
     // region Part 3
@@ -108,7 +114,20 @@ public class AmazonHomePage extends BasePage {
     @FindBy(xpath = "//input[@value='26bcfaa3-1528-4164-b95f-28d64cf2e209']")
     public WebElement findMyStyleCheckbox;
 
+    @FindBy(xpath = "//textarea[@id='formInput2']")
+    public WebElement textArea1;
 
+    @FindBy(xpath = "//textarea[@id='formInput3']")
+    public WebElement textArea2;
+
+    @FindBy(xpath = "//textarea[@id='formInput4']")
+    public WebElement textArea3;
+
+    @FindBy(xpath = "//div[@class='a-section form-submit-button-container']//input[@type='submit']")
+    public WebElement surveySubmitButton;
+
+    @FindBy(xpath = "//div[@class='a-section form-result-text']")
+    public WebElement successfullySubmittedFormText;
     // endregion
 
     // region Test Case 4 Web Elements
@@ -126,6 +145,9 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//input[@aria-labelledby='attachSiNoCoverage-announce']")
     public WebElement noThanksToWarrantyCoverageButton;
+
+    @FindBy(xpath = "//span[@class='a-size-medium-plus a-color-base sw-atc-text a-text-bold']")
+    public WebElement addedToCartConfirmationText;
     // endregion
 
     // region Test Case 5 Web Elements
@@ -175,6 +197,9 @@ public class AmazonHomePage extends BasePage {
 
     @FindBy(xpath = "//a[@class='a-link-normal 5star']")
     public WebElement fiveStarReviewLink;
+
+    @FindBy(xpath = "(//span[@class='a-dropdown-prompt'])[3]")
+    public WebElement fiveStarOnlyText;
     // endregion
 
 
